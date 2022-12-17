@@ -2,11 +2,14 @@
   "name": "metaverse13",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://denislemeshko.github.io/next-13/",
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "next build && next export",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "dependencies": {
     "eslint-config-next": "13.0.3",
